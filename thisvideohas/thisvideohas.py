@@ -23,7 +23,7 @@ youtube = googleapiclient.discovery.build(
 
 
 def main():
-    thread = threading.Timer(120.0, main)
+    thread = threading.Timer(600.0, main)
     thread.start()
 
     snippet = get_stats(videoid)
