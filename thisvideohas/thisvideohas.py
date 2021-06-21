@@ -13,7 +13,7 @@ os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 api_service_name = "youtube"
 api_version = "v3"
 client_secrets_file = "client_secret.json"
-videoid = 'I2tAQVJyiRc'
+videoid = ''
 print('Starting...')
 flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
     client_secrets_file, scopes)
@@ -26,7 +26,6 @@ def main():
     thread = threading.Timer(120.0, main)
     thread.start()
 
-    print('Setting new title...')
     snippet = get_stats(videoid)
     result = change_title(videoid, snippet)
 
