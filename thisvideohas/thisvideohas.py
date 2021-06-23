@@ -52,9 +52,8 @@ def get_stats(id):
     views = stats['viewCount']
     likes = stats['likeCount']
     dislikes = stats['dislikeCount']
-    favorites = stats['favoriteCount']
     comments = stats['commentCount']
-    title = f'This video has: {views} views, {likes} likes, {dislikes} dislikes, {favorites} favorites, {comments} comments'
+    title = f'This video has: {views} views, {likes} likes, {dislikes} dislikes, {comments} comments'
     snippet['title'] = title
     return snippet
 
