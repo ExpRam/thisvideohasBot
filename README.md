@@ -1,3 +1,3 @@
 # thisvideohasBot
 
-[Video Example](https://www.youtube.com/watch?v=glG8F-XeUqg)
+[Video Example](https://youtu.be/79I8O0xpfQM)
