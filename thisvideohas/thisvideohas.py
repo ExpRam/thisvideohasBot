@@ -1,5 +1,5 @@
 import os
-import threading
+import time
 
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
@@ -23,15 +23,14 @@ youtube = googleapiclient.discovery.build(
 
 
 def main():
-    thread = threading.Timer(600.0, main)
-    thread.start()
+    while True:
+        snippet = get_stats(videoid)
+        result = change_title(videoid, snippet)
 
-    snippet = get_stats(videoid)
-    result = change_title(videoid, snippet)
-
-    if snippet is None or result is None:
-        thread.cancel()
-        exit(1)
+        if snippet is None or result is None:
+            break
+            exit(1)
+        time.sleep(9 * 60)
 
 
 def get_stats(id):
